@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache
+Software Foundation//DTD Tiles Configuration 3.0//EN"
+"http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    
+    
+    
+    
+    <!--For Home Page-->
+    <definition name="baseLayout" 
+                template="/WEB-INF/layouts/Base.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" 
+                       value="/WEB-INF/layouts/Header.jsp" />
+        <put-attribute name="content" value="" />
+        <put-attribute name="footer" 
+                       value="/WEB-INF/layouts/Footer.jsp" />
+    </definition>
+    
+    <!--home index-->
+    <definition name="index" extends="baseLayout">
+        <put-attribute name="title" value="Trang chủ" />
+        <put-attribute name="content" 
+                       value="/WEB-INF/jsp/main/index.jsp" />    
+    </definition>
+    
+    <!--home station-->
+    <definition name="BusStation" extends="baseLayout">
+        <put-attribute name="title" value="Bus Station" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/main/station/BusStation.jsp" />
+    </definition>
+    
+    <definition name="allStation" extends="baseLayout">
+        <put-attribute name="title" value="Station" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/main/station/allStation.jsp" />
+    </definition>
+    
+    <!--home bus-->
+    <definition name="BusInfo" extends="baseLayout">
+        <put-attribute name="title" value="BUS" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/main/bus/BusInfo.jsp" />
+    </definition>
+    <definition name="listBus" extends="baseLayout">
+        <put-attribute name="title" value="BUS" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/main/bus/listBus.jsp" />
+    </definition>
+    
+    <!--home own-->
+    <definition name="lineInfo" extends="baseLayout">
+        <put-attribute name="title" value="BUS" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/main/own/lineInfo.jsp" />
+    </definition>
+    <definition name="ownDetails" extends="baseLayout">
+        <put-attribute name="title" value="BUS" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/main/own/ownDetails.jsp" />
+    </definition>
+    <definition name="viewBusOwn" extends="baseLayout">
+        <put-attribute name="title" value="BUS" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/main/own/viewBusOwn.jsp" />
+    </definition>
+    
+    <!--home user customer-->
+    <definition name="register" extends="baseLayout">
+        <put-attribute name="title" value="REGISTER" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/main/register.jsp" />
+    </definition>
+    
+    <definition name="Login" extends="baseLayout">
+        <put-attribute name="title" value="LOGIN" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/main/Login.jsp" />
+    </definition>
+    <definition name="myAccount" extends="baseLayout">
+        <put-attribute name="title" value="MY ACCOUNT" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/main/user/myAccount.jsp" />
+    </definition>
+    <definition name="changePass" extends="baseLayout">
+        <put-attribute name="title" value="MY ACCOUNT" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/main/user/changePass.jsp" />
+    </definition>
+    
+    <!--home news-->
+    <definition name="News" extends="baseLayout">
+        <put-attribute name="title" value="NEWS" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/main/news/News.jsp" />
+    </definition>
+    <definition name="newsDetailsMain" extends="baseLayout">
+        <put-attribute name="title" value="NEWS" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/main/news/newsDetailsMain.jsp" />
+    </definition>
+    
+    <!--home locked page-->
+    <definition name="lockedPage" extends="baseLayout">
+        <put-attribute name="title" value="NEWS" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/main/lockedPage.jsp" />
+    </definition>
+    
+    
+    <!--home ticket-->
+    <definition name="bookTicketMain" extends="baseLayout">
+        <put-attribute name="title" value="BOOKING" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/main/ticket/bookTicketMain.jsp" />
+    </definition>
+    <definition name="bookHistory" extends="baseLayout">
+        <put-attribute name="title" value="BOOKING" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/main/ticket/bookHistory.jsp" />
+    </definition>
+    
+    
+    
+    
+    
+    <definition name="accessDenied" extends="baseLayout">
+        <put-attribute name="title" value="BOOKING" />
+        <put-attribute name="content"
+                       value="/WEB-INF/jsp/main/accessDenied.jsp" />
+    </definition>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!--For Admin Page-->
+    <definition name="baseAdmin" 
+                template="/WEB-INF/layouts/adminBase.jsp">
+        <put-attribute name="title" value="" />
+        
+    </definition>
+    <definition name="adminPage" extends="baseAdmin">
+        <put-attribute name="title" value="Admin" />
+        <put-attribute name="adminContent" 
+                       value="/WEB-INF/jsp/admin/adminPage.jsp" />
+    </definition>
+    
+    
+    
+    
+    
+    <!--admin news-->
+    <definition name="newsManagerAdmin" extends="baseAdmin">
+        <put-attribute name="title" value="NEWS" />
+        <put-attribute name="adminContent"
+                       value="/WEB-INF/jsp/admin/news/newsManagerAdmin.jsp" />
+    </definition>
+    <definition name="newsDetailsAdmin" extends="baseAdmin">
+        <put-attribute name="title" value="NEWS Details" />
+        <put-attribute name="adminContent"
+                       value="/WEB-INF/jsp/admin/news/newsDetailsAdmin.jsp" />
+    </definition>
+    <definition name="newsAddAdmin" extends="baseAdmin">
+        <put-attribute name="title" value="Add News" />
+        <put-attribute name="adminContent" 
+                       value="/WEB-INF/jsp/admin/news/newsAddAdmin.jsp" />
+    </definition>
+    <definition name="newsBlockAdmin" extends="baseAdmin">
+        <put-attribute name="title" value="NEWS BLOCKED" />
+        <put-attribute name="adminContent"
+                       value="/WEB-INF/jsp/admin/news/newsBlockAdmin.jsp" />
+    </definition>
+    
+    <definition name="newsUpdateAdmin" extends="baseAdmin">
+        <put-attribute name="title" value="NEWS" />
+        <put-attribute name="adminContent"
+                       value="/WEB-INF/jsp/admin/news/newsUpdateAdmin.jsp" />
+    </definition>
+    
+    
+    
+    
+    
+    
+    <!--admin user-->
+    <definition name="userManager" extends="baseAdmin">
+        <put-attribute name="title" value="User Manager" />
+        <put-attribute name="adminContent"
+                       value="/WEB-INF/jsp/admin/user/userManager.jsp" />
+    </definition>
+    <definition name="userInfo" extends="baseAdmin">
+        <put-attribute name="title" value="User Infomation" />
+        <put-attribute name="adminContent"
+                       value="/WEB-INF/jsp/admin/user/userInfo.jsp" />
+    </definition>
+    <definition name="userRegisterAdmin" extends="baseAdmin">
+        <put-attribute name="title" value="ADMIN REGISTER" />
+        <put-attribute name="adminContent"
+                       value="/WEB-INF/jsp/admin/user/userRegisterAdmin.jsp" />
+    </definition>
+    <definition name="userUpdateAdmin" extends="baseAdmin">
+        <put-attribute name="title" value="UPDATE" />
+        <put-attribute name="adminContent"
+                       value="/WEB-INF/jsp/admin/user/userUpdateAdmin.jsp" />
+    </definition>
+    
+    
+    
+    
+    <!--admin station-->
+    <definition name="stationManager" extends="baseAdmin">
+        <put-attribute name="title" value="Station Manager" />
+        <put-attribute name="adminContent"
+                       value="/WEB-INF/jsp/admin/station/stationManager.jsp" />
+    </definition>
+    <definition name="stationDetails" extends="baseAdmin">
+        <put-attribute name="title" value="Station Details" />
+        <put-attribute name="adminContent"
+                       value="/WEB-INF/jsp/admin/station/stationDetails.jsp" />
+    </definition>
+    <definition name="stationAdd" extends="baseAdmin">
+        <put-attribute name="title" value="Station Add" />
+        <put-attribute name="adminContent"
+                       value="/WEB-INF/jsp/admin/station/stationAdd.jsp" />
+    </definition>
+    <definition name="stationBlock" extends="baseAdmin">
+        <put-attribute name="title" value="Station Block" />
+        <put-attribute name="adminContent"
+                       value="/WEB-INF/jsp/admin/station/stationBlock.jsp" />
+    </definition>
+    <definition name="stationUpdate" extends="baseAdmin">
+        <put-attribute name="title" value="Station" />
+        <put-attribute name="adminContent"
+                       value="/WEB-INF/jsp/admin/station/stationUpdate.jsp" />
+    </definition>
+    
+    
+    <!--admin owner-->
+    <definition name="ownerManagerAdmin" extends="baseAdmin">
+        <put-attribute name="title" value="Manager" />
+        <put-attribute name="adminContent"
+                       value="/WEB-INF/jsp/admin/owner/ownerManagerAdmin.jsp" />
+    </definition>
+    <definition name="ownerDetailsAdmin" extends="baseAdmin">
+        <put-attribute name="title" value="Details" />
+        <put-attribute name="adminContent"
+                       value="/WEB-INF/jsp/admin/owner/ownerDetailsAdmin.jsp" />
+    </definition>
+    <definition name="ownerAddAdmin" extends="baseAdmin">
+        <put-attribute name="title" value="Add" />
+        <put-attribute name="adminContent"
+                       value="/WEB-INF/jsp/admin/owner/ownerAddAdmin.jsp" />
+    </definition>
+    <definition name="ownerBlockAdmin" extends="baseAdmin">
+        <put-attribute name="title" value="Block" />
+        <put-attribute name="adminContent"
+                       value="/WEB-INF/jsp/admin/owner/ownerBlockAdmin.jsp" />
+    </definition>
+    <definition name="ownerActiveAdmin" extends="baseAdmin">
+        <put-attribute name="title" value="Active" />
+        <put-attribute name="adminContent"
+                       value="/WEB-INF/jsp/admin/owner/ownerActiveAdmin.jsp" />
+    </definition>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <!--For Onwer-->
+    <definition name="baseOwner" 
+                template="/WEB-INF/layouts/ownerBase.jsp">
+        <put-attribute name="title" value="" />
+        
+    </definition>
+    
+    <definition name="ownerPage" extends="baseOwner">
+        <put-attribute name="title" value="Owner Page" />
+        <put-attribute name="ownerContent"
+                       value="/WEB-INF/jsp/owner/ownerPage.jsp" />
+    </definition>
+    <definition name="ownerAdd" extends="baseOwner">
+        <put-attribute name="title" value="ADD" />
+        <put-attribute name="ownerContent"
+                       value="/WEB-INF/jsp/owner/ownerAdd.jsp" />
+    </definition>
+    <definition name="ownerUpdate" extends="baseOwner">
+        <put-attribute name="title" value="ADD" />
+        <put-attribute name="ownerContent"
+                       value="/WEB-INF/jsp/owner/ownerUpdate.jsp" />
+    </definition>
+    <definition name="lockOwnerPage" extends="baseOwner">
+        <put-attribute name="title" value="Locked" />
+        <put-attribute name="ownerContent"
+                       value="/WEB-INF/jsp/owner/lockOwnerPage.jsp" />
+    </definition>
+    
+    <!--owner user-->
+    <definition name="myAccount" extends="baseOwner">
+        <put-attribute name="title" value="MY ACCOUNT" />
+        <put-attribute name="ownerContent"
+                       value="/WEB-INF/jsp/owner/user/myAccount.jsp" />
+    </definition>
+    
+    <!--owner line-->
+    <definition name="allBusLine" extends="baseOwner">
+        <put-attribute name="title" value="Line" />
+        <put-attribute name="ownerContent"
+                       value="/WEB-INF/jsp/owner/line/allBusLine.jsp" />
+    </definition>
+    <definition name="addBusLineByOwn" extends="baseOwner">
+        <put-attribute name="title" value="BUS" />
+        <put-attribute name="ownerContent"
+                       value="/WEB-INF/jsp/owner/line/addBusLineByOwn.jsp" />
+    </definition>
+    
+    <definition name="updateBusLine" extends="baseOwner">
+        <put-attribute name="title" value="BUS" />
+        <put-attribute name="ownerContent"
+                       value="/WEB-INF/jsp/owner/line/updateBusLine.jsp" />
+    </definition>
+    
+    <!--owner bus-->
+    <definition name="allBus" extends="baseOwner">
+        <put-attribute name="title" value="Bus" />
+        <put-attribute name="ownerContent"
+                       value="/WEB-INF/jsp/owner/bus/allBus.jsp" />
+    </definition>
+    <definition name="busDetails" extends="baseOwner">
+        <put-attribute name="title" value="Bus Details" />
+        <put-attribute name="ownerContent"
+                       value="/WEB-INF/jsp/owner/bus/busDetails.jsp" />
+    </definition>
+    <definition name="addBusByOwn" extends="baseOwner">
+        <put-attribute name="title" value="BUS" />
+        <put-attribute name="ownerContent"
+                       value="/WEB-INF/jsp/owner/bus/addBusByOwn.jsp" />
+    </definition>
+    <definition name="updateBus" extends="baseOwner">
+        <put-attribute name="title" value="BUS" />
+        <put-attribute name="ownerContent"
+                       value="/WEB-INF/jsp/owner/bus/updateBus.jsp" />
+    </definition>
+    <definition name="ownerBusPage" extends="baseOwner">
+        <put-attribute name="title" value="BUS" />
+        <put-attribute name="ownerContent"
+                       value="/WEB-INF/jsp/owner/bus/ownerBusPage.jsp" />
+    </definition>
+    
+    
+    <!--owner ticket-->
+    <definition name="bookTicket" extends="baseOwner">
+        <put-attribute name="title" value="Book" />
+        <put-attribute name="ownerContent"
+                       value="/WEB-INF/jsp/owner/ticket/bookTicket.jsp" />
+    </definition>
+    <definition name="allTicket" extends="baseOwner">
+        <put-attribute name="title" value="Ticket" />
+        <put-attribute name="ownerContent"
+                       value="/WEB-INF/jsp/owner/ticket/allTicket.jsp" />
+    </definition>
+    
+    
+
+    
+    
+    
+    <!--owner news-->
+    <definition name="newsAddOwner" extends="baseOwner">
+        <put-attribute name="title" value="NEWS" />
+        <put-attribute name="ownerContent"
+                       value="/WEB-INF/jsp/owner/news/newsAddOwner.jsp" />
+    </definition>
+    <definition name="newsDetailsOwner" extends="baseOwner">
+        <put-attribute name="title" value="NEWS" />
+        <put-attribute name="ownerContent"
+                       value="/WEB-INF/jsp/owner/news/newsDetailsOwner.jsp" />
+    </definition>
+    <definition name="newsManagerOwner" extends="baseOwner">
+        <put-attribute name="title" value="NEWS" />
+        <put-attribute name="ownerContent"
+                       value="/WEB-INF/jsp/owner/news/newsManagerOwner.jsp" />
+    </definition>
+    <definition name="newsUpdateOwner" extends="baseOwner">
+        <put-attribute name="title" value="NEWS" />
+        <put-attribute name="ownerContent"
+                       value="/WEB-INF/jsp/owner/news/newsUpdateOwner.jsp" />
+    </definition>
+    
+    
+    
+    
+    
+    <!--owner freight-->
+    <definition name="viewFreight" extends="baseOwner">
+        <put-attribute name="title" value="FREIGHT" />
+        <put-attribute name="ownerContent"
+                       value="/WEB-INF/jsp/owner/freight/viewFreight.jsp" />
+    </definition>
+    <definition name="addFreight" extends="baseOwner">
+        <put-attribute name="title" value="FREIGHT" />
+        <put-attribute name="ownerContent"
+                       value="/WEB-INF/jsp/owner/freight/addFreight.jsp" />
+    </definition>
+    <definition name="detailsFreight" extends="baseOwner">
+        <put-attribute name="title" value="FREIGHT" />
+        <put-attribute name="ownerContent"
+                       value="/WEB-INF/jsp/owner/freight/detailsFreight.jsp" />
+    </definition>
+    <definition name="updateFreight" extends="baseOwner">
+        <put-attribute name="title" value="FREIGHT" />
+        <put-attribute name="ownerContent"
+                       value="/WEB-INF/jsp/owner/freight/updateFreight.jsp" />
+    </definition>
+    <definition name="noneFR" extends="baseOwner">
+        <put-attribute name="title" value="FREIGHT" />
+        <put-attribute name="ownerContent"
+                       value="/WEB-INF/jsp/owner/freight/noneFR.jsp" />
+    </definition>
+    
+    
+    <!--own stats-->
+    <definition name="stats" extends="baseOwner">
+        <put-attribute name="title" value="FREIGHT" />
+        <put-attribute name="ownerContent"
+                       value="/WEB-INF/jsp/owner/statistic/stats.jsp" />
+    </definition>
+    
+</tiles-definitions>
+
